@@ -15,19 +15,12 @@ function updateDateTime(){
 
 	 let formattedHour = hours % 12 || 12;
 
-	let formattedTime = '${formattedHour}:${minutes}:${seconds} ${amOrpm}';
+	let formattedTime = `${formattedHour}:${minutes}:${seconds} ${amOrpm}`;
 
-	let formattedDate = '${month}/${date}/${year}'
+	let formattedDate = `${month}/${date}/${year}`
     
    let result = formattedDate+","+" " +formattedTime;
 	timerElement.textContent =result;
 }
-
-
-
-
-
-
-
 setInterval(updateDateTime,1000);
 updateDateTime();
